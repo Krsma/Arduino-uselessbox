@@ -1,38 +1,50 @@
 #include <VarSpeedServo.h>
 
 
-
-VarSpeedServo krov;
 VarSpeedServo ruka;
 
 int servo1=9;
-int servo2=10;
+int bes;
 
 boolean prekidac=false;
 void setup() {
   // put your setup code here, to run once:
-Serial.begin(9600);
-krov.attach(servo1);
-ruka.attach(servo2);
+bes=0;
+ruka.attach(servo1);
 
-krov.write(0,100,true);
 ruka.write(0,100,true);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+angermanagment;
     if (prekidac=true)
     {
-      delay(300);
-      krov.write(180, 200, true);
-      delay(50);
+      
+      inc(bes);
+      delay(100);
       ruka.write(180,255,true);
-      delay(75);
-      ruka.write(0,255,true);
       delay(50);
-      krov.write(0,255,true);
+      ruka.write(0,255,true);
       }
 
 
-  delay(20);    
+
+if (millis()-drkan>3000)
+{
+  drkan=millis();
+  bes=bes-1;
+  
+  }
+  
+  
+  delay(5);    
 }
+
+void angermanagment;
+
+{
+  //kontorla led dioda kao i ponasanje robota bryakov posao
+  
+  }
+
+
