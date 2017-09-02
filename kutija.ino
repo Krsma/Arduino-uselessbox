@@ -1,4 +1,5 @@
-//code done by Vladimir Krsmanovic and Bransliva Brzak and Igor Putnik
+//code done by Vladimir Krsmanovic and Branislav Brzak and Igor Putnik
+//most of the qwork done by Branislav Brzak, on my github for hosting reasons
 #include <VarSpeedServo.h>
 #include <FastLED.h>
  
